@@ -1,7 +1,21 @@
 ﻿
 
-.formLog_on{
-    float:right;
-    padding:100px;
-    position:relative;
+.divLog_on {
+    float: left;
+    padding: 50px;
+    background-color:ghostwhite;
+    width:450px;
+    height:450px;
+}
+
+.divRegister {
+    float: right;
+    padding: 50px;
+    background-color: ghostwhite;
+    width: 450px;
+    height: 450px;
+}
+
+.clearRegister{
+    clear:both;
 }

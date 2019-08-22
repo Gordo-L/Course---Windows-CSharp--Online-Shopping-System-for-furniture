@@ -1,0 +1,13 @@
+﻿
+
+.divRegister2 {
+    float: left;
+    padding:30px;
+    width: 550px;
+    height: 550px;
+    background-color: ghostwhite;
+}
+
+.clearRegister22 {
+    clear: both;
+}
