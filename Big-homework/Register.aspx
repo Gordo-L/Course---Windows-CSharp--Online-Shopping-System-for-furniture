@@ -13,6 +13,7 @@
             <li role="presentation"><a href="#">客厅</a></li>
             <li role="presentation"><a href="#">厨房</a></li>
             <li role="presentation"><a href="#">书房</a></li>
+            <li role="presentation"><a href="#">阳台</a></li>
         </ul>
     </nav>
 
