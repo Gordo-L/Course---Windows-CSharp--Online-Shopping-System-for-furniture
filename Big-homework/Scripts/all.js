@@ -1,9 +1,9 @@
 ﻿
 
-function callWebMethod(method, data, func) {
+function webCall(method, data, func) {
     $.ajax({
         type: "POST",
-        url: method,
+        url: "service.asmx/" + method,
         data: data,
         contentType: "application/json;charset=utf-8",
         datatype: "json",

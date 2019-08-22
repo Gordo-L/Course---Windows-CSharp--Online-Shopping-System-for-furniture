@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Big-homework", "Big-homework\Big-homework.csproj", "{B62822FA-3DB1-4C9C-A9A6-C57514EF72F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{9DE703BD-E9C7-4B69-9FB4-BAEE7895C4CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proc", "ClassLibrary1\Proc.csproj", "{9DE703BD-E9C7-4B69-9FB4-BAEE7895C4CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
