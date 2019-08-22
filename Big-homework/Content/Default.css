@@ -1,6 +1,12 @@
 ﻿
+#navbar1 {
+    display: inline-block;
+}
 
 #personalcenter {
+    border: 1px solid black;
+    border-radius: 5px;
     position: relative;
     float:right;
 }
+
