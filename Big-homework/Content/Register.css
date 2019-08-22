@@ -4,10 +4,14 @@
     float: left;
     padding:30px;
     width: 550px;
-    height: 550px;
+    height: 700px;
     background-color: ghostwhite;
 }
 
-.clearRegister22 {
-    clear: both;
+.RegisterErrors {
+    display: none;
+}
+
+.clearRegister2 {
+    clear: left;
 }

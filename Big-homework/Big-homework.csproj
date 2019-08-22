@@ -131,6 +131,7 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Log_on.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="Scripts\all.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Default.js" />
