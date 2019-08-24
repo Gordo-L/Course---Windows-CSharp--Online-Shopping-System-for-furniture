@@ -58,6 +58,8 @@
         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
     <br />
+    <h4>您需支付：</h4>
+    <h4>¥ 4,298.00</h4>
     <a href="Payment.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">支付</a>
 
 

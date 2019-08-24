@@ -29,3 +29,17 @@ textarea {
         padding: 0;
     }
 }
+#upkey {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#upkeynote{
+    position:fixed;
+    bottom:0;
+    right:40px;
+}
+#status{
+    position:relative;
+    left:50px;
+}

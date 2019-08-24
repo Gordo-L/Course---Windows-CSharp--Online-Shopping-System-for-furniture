@@ -7,8 +7,8 @@
     <%--导航栏（所有产品/卧室/浴室/客厅/厨房/书房）--%>
     <nav>
         <ul class="nav nav-pills" role="tablist">
-            <li role="presentation" class="active"><a href="#">所有产品</a></li>
-            <li role="presentation"><a href="#">卧室</a></li>
+            <li role="presentation" class="active"><a href="Default.aspx">所有产品</a></li>
+            <li role="presentation"><a href="Bedroom.aspx">卧室</a></li>
             <li role="presentation"><a href="#">浴室</a></li>
             <li role="presentation"><a href="#">客厅</a></li>
             <li role="presentation"><a href="#">厨房</a></li>

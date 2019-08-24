@@ -50,7 +50,7 @@
             <div class="col-sm-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a class="panel-title" href ="Bedroom.aspx">卧室</a>
+                        <a class="panel-title" href="Bedroom.aspx">卧室</a>
                     </div>
                     <div class="panel-body">
                         <a href="Bed.aspx">床</a>
@@ -113,14 +113,6 @@
             <!-- /.col-sm-4 -->
         </div>
     </nav>
-
-
-
-
-
-
-
-    <p class="para">测试文字</p>
 
 
     <%--进度条--%>

@@ -51,32 +51,33 @@
             </thead>
             <tbody>
                 <tr>
-                    <td rowspan="2">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@TwBootstrap</td>
-                </tr>
+                    <td>1</td>
+                    <td>买家</td>
+                    <td>1@zju.edu.cn</td>
+                    <td><input type="checkbox"/></td>                </tr>
                 <tr>
                     <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>卖家</td>
+                    <td>12@zju.edu.cn</td>
+                    <td><input type="checkbox"/></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td>管理员</td>
+                    <td>123@zju.edu.cn</td>
+                    <td><input type="checkbox"/></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>买家</td>
+                    <td>1234@zju.edu.cn</td>
+                    <td><input type="checkbox"/></td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="clearfloat"></div>
-    <a href="Shopcart.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">确认</a>
+    <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">确认</a>
 
 
 

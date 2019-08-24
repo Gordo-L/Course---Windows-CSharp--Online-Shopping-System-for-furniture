@@ -47,6 +47,8 @@
     <input type="file" class="custom-file-input" id="photobox" style="display:inline">
     <button class="btn btn-outline-secondary" type="button" >上传</button>
     <br />
+    <p>上传商品介绍：</p>
+    <textarea></textarea>
     <br />
     <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交申请</a>
 

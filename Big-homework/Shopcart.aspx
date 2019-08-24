@@ -53,33 +53,27 @@
             </thead>
             <tbody>
                 <tr>
-                    <td rowspan="2">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@TwBootstrap</td>
+                    <td>1</td>
+                    <td>KOPARDAL 科帕达 床架</td>
+                    <td>¥ 1,299.00</td>
+                    <td>1</td>
+                    <td>¥ 1,299.00</td>
+                    <td><input type="checkbox"/></td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td>MALM 马尔姆 高箱气压床</td>
+                    <td>¥ 2,999.00</td>
+                    <td>1</td>
+                    <td>¥ 2,999.00</td>
+                    <td><input type="checkbox"/></td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="clearfloat"></div>
     <h3>总计:</h3>
-    <input type="text"  />
+    <h3>¥ 4,298.00</h3>
     <a href="Payment.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交订单</a>
 
     
