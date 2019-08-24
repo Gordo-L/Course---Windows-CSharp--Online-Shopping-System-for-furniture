@@ -7,7 +7,7 @@
     <nav id="navbar1">
         <ul class="nav nav-pills" role="tablist">
             <li role="presentation" class="active"><a href="#">所有产品</a></li>
-            <li role="presentation"><a href="#">卧室</a></li>
+            <li role="presentation"><a href="Bedroom.aspx">卧室</a></li>
             <li role="presentation"><a href="#">浴室</a></li>
             <li role="presentation"><a href="#">客厅</a></li>
             <li role="presentation"><a href="#">厨房</a></li>
@@ -28,6 +28,15 @@
         </div>
     </div>
 
+    <%--购物车--%>
+    <div class="dropdown" id="dropdownbutton_shopcart">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">购物车</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="Shopcart.aspx">查看我的购物车</a>
+        </div>
+    </div>
+    <div class="clearfloat"></div>
+
     <%--所有产品 标题--%>
     <nav>
         <div class="jumbotron">
@@ -41,10 +50,11 @@
             <div class="col-sm-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">卧室</h3>
+                        <a class="panel-title" href ="Bedroom.aspx">卧室</a>
                     </div>
                     <div class="panel-body">
-                        床<br />
+                        床
+                        <br />
                         衣柜
                     </div>
                 </div>
@@ -121,5 +131,4 @@
     </nav>--%>
 
     <script src="Scripts/Default.js"></script>
-
 </asp:Content>

@@ -1,17 +1,14 @@
-﻿
-#navbar1 {
+﻿#navbar1 {
     display: inline-block;
 }
-
 #personalcenter {
     position: relative;
-    float:right;
+    float: right;
 }
 
-#dropdownbutton_shopcart{
-    position:relative;
+#dropdownbutton_shopcart {
+    position: relative;
     float: right;
-
 }
 .clearfloat {
     clear: both;

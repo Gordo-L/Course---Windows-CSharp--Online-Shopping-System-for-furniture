@@ -1,0 +1,16 @@
+﻿#navbar1 {
+    display: inline-block;
+}
+#personalcenter {
+    position: relative;
+    float: right;
+}
+
+#dropdownbutton_shopcart {
+    position: relative;
+    float: right;
+}
+
+.clearfloat{
+    clear:both;
+}
