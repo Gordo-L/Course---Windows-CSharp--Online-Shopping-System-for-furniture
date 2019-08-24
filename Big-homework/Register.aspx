@@ -77,13 +77,13 @@
                     <legend class="col-form-label col-sm-2 pt-0">选择</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="radio_register1" value="option1" checked>
+                            <input class="" type="radio" name="gridRadios1" id="radio_register1" value="option1" checked>
                             <label class="form-check-label" for="radio_register1">
                                 注册为买家
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="gridRadios" id="radio_register2" value="option2">
+                            <input class="" type="radio" name="gridRadios1" id="radio_register2" value="option2">
                             <label class="form-check-label" for="radio_register2">
                                 注册为卖家
                             </label>

@@ -13,14 +13,6 @@ $("#input_confirm2").blur(function () {
     registerTestConfirmPass();
 });
 
-$("#radio_register2").click(function () {
-    var cb = $("#radio_register2");
-    if (cb.prop("checked")) {
-        cb.prop("checked", false);
-    } else {
-        cb.prop("checked", true);
-    }
-});
 
 
 $("#button_register").click(function () {
@@ -32,7 +24,7 @@ $("#button_register").click(function () {
         "encPass": md5($("#input_password2").val()).toUpperCase(),
         "isMerchant": $("#button_register").prop("checked")
     };
-    callWebMethod("MainService.asmx/RegisterUser", JSON.stringify(para), function (res) {
+    webCall("RegisterUser", JSON.stringify(para), function (res) {
         if (res.d) {
             window.location.href = "LoginPage.aspx?source=1";
         } else {
