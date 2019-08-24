@@ -1,5 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Big_homework.SiteMaster" %>
-   
+
 <link rel="stylesheet" type="text/css" href="Content/Site.css">
 
 <!DOCTYPE html>
@@ -20,7 +20,6 @@
 
 </head>
 
-    <h5 id="status">状态栏：加载成功……</h5>
 
 <body>
     <form runat="server">
@@ -73,10 +72,13 @@
             <script src="Scripts/all.js"></script>
         </div>
 
-        
-    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="upkeynote"  >返回顶部快捷键Alt+W</a><a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="upkey" accesskey="W">▲</a>
 
-    <script src="Scripts/Site.js"></script>
+        <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="upkeynote">返回顶部快捷键Alt+W</a><a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" id="upkey" accesskey="W">▲</a>
+
+        <div id="status">
+            <p>状态栏：加载中……</p>
+        </div>
+        <script src="Scripts/Site.js"></script>
 
     </form>
 </body>

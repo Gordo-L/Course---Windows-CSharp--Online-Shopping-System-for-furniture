@@ -7,3 +7,10 @@ $("#upkey").mouseover(function () {
 $("#upkey").mouseleave(function () {
     $("#upkeynote").hide();
 })
+
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#status p").text("状态栏：加载成功");
+    }, 1500);
+    
+})

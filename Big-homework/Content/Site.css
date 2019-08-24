@@ -31,15 +31,22 @@ textarea {
 }
 #upkey {
     position: fixed;
-    bottom: 0;
+    bottom: 30%;
     right: 0;
 }
 #upkeynote{
     position:fixed;
-    bottom:0;
+    bottom:30%;
     right:40px;
 }
 #status{
-    position:relative;
-    left:50px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+#status p {
+    position: relative;
+    left: 10%;
 }
