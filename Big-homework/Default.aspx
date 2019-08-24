@@ -53,9 +53,9 @@
                         <a class="panel-title" href ="Bedroom.aspx">卧室</a>
                     </div>
                     <div class="panel-body">
-                        床
+                        <a href="Bed.aspx">床</a>
                         <br />
-                        衣柜
+                        <a href="Wardrobe.aspx">衣柜</a>
                     </div>
                 </div>
                 <div class="panel panel-primary">

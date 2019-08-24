@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Shopcart.aspx.cs" Inherits="Big_homework.Shopcart" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Payment.aspx.cs" Inherits="Big_homework.Payment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link rel="stylesheet" type="text/css" href="Content/Shopcart.css">
+    <link rel="stylesheet" type="text/css" href="Content/Payment.css">
     <%--导航栏（所有产品/卧室/浴室/客厅/厨房/书房）--%>
     <nav>
         <ul class="nav nav-pills" role="tablist">
@@ -37,51 +37,28 @@
     </div>
     <div class="clearfloat"></div>
 
-    <h1>我的购物车</h1>
-    <br />
-    <div class="col-md-6">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>产品名</th>
-                    <th>单价</th>
-                    <th>数量</th>
-                    <th>总价格</th>
-                    <th>移出购物车</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="2">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@TwBootstrap</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="rec_name">收件人姓名</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
-    <div class="clearfloat"></div>
-    <h3>总计:</h3>
-    <input type="text"  />
-    <a href="Payment.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交订单</a>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="rec_name">收件人联系电话</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <br />
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="rec_name">收件人地址</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <br />
+    <a href="Payment.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">支付</a>
 
-    
 
 </asp:Content>

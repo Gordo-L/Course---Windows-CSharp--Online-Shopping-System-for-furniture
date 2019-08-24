@@ -1,13 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bedroom.aspx.cs" Inherits="Big_homework.Bedroom" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Bed.aspx.cs" Inherits="Big_homework.Bed" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link rel="stylesheet" type="text/css" href="Content/Bedroom.css">
+    <link rel="stylesheet" type="text/css" href="Content/Bed.css">
     <%--导航栏（所有产品/卧室/浴室/客厅/厨房/书房）--%>
     <nav>
         <ul class="nav nav-pills" role="tablist">
             <li role="presentation"><a href="Default.aspx">所有产品</a></li>
-            <li role="presentation" class="active"><a href="#">卧室</a></li>
+            <li role="presentation" class="active"><a href="Bedroom.aspx">卧室</a></li>
             <li role="presentation"><a href="#">浴室</a></li>
             <li role="presentation"><a href="#">客厅</a></li>
             <li role="presentation"><a href="#">厨房</a></li>
@@ -109,34 +108,6 @@
                 <a href="Shopcart.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">添加到购物车</a>
                 <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">查看详情</a>
                 </div>
-            <div class="card-footer">
-                <small class="text-muted"></small>
-            </div>
-        </div>
-        <br />
-        <div class="card" id="wardrobe1">
-            <img src="images/衣柜1.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">PAX 帕克思 衣柜</h5>
-                <h4>¥ 3,310.00</h4>
-                <p class="card-text">宽度: 150 厘米, 深度: 66 厘米, 高度: 236.4 厘米</p>
-                <a href="Shopcart.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">添加到购物车</a>
-                <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">查看详情</a> 
-            </div>
-            <div class="card-footer">
-                <small class="text-muted"></small>
-            </div>
-        </div>
-        <br />
-        <div class="card" id="wardrobe2">
-            <img src="images/衣柜2.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">PAX 帕克思 衣柜</h5>
-                <h4>¥ 6,190.00</h4>
-                <p class="card-text">宽度: 250 厘米, 深度: 60 厘米, 高度: 236.4 厘米</p>
-                <a href="Shopcart.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">添加到购物车</a>
-                <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">查看详情</a>
-            </div>
             <div class="card-footer">
                 <small class="text-muted"></small>
             </div>

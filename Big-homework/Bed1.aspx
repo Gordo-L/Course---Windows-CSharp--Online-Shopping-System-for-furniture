@@ -7,7 +7,7 @@
     <nav>
         <ul class="nav nav-pills" role="tablist">
             <li role="presentation"><a href="Default.aspx">所有产品</a></li>
-            <li role="presentation" class="active"><a href="#">卧室</a></li>
+            <li role="presentation" class="active"><a href="Bedroom.aspx">卧室</a></li>
             <li role="presentation"><a href="#">浴室</a></li>
             <li role="presentation"><a href="#">客厅</a></li>
             <li role="presentation"><a href="#">厨房</a></li>

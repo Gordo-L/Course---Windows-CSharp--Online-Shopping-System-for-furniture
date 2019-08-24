@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Shopcart.aspx.cs" Inherits="Big_homework.Shopcart" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="admin_goods.aspx.cs" Inherits="Big_homework.admin_goods" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <link rel="stylesheet" type="text/css" href="Content/Shopcart.css">
+    <link rel="stylesheet" type="text/css" href="Content/admin_goods.css">
+
     <%--导航栏（所有产品/卧室/浴室/客厅/厨房/书房）--%>
-    <nav>
+    <nav id="navbar1">
         <ul class="nav nav-pills" role="tablist">
-            <li role="presentation"><a href="Default.aspx">所有产品</a></li>
-            <li role="presentation" class="active"><a href="#">卧室</a></li>
+            <li role="presentation" class="active"><a href="#">所有产品</a></li>
+            <li role="presentation"><a href="Bedroom.aspx">卧室</a></li>
             <li role="presentation"><a href="#">浴室</a></li>
             <li role="presentation"><a href="#">客厅</a></li>
             <li role="presentation"><a href="#">厨房</a></li>
@@ -37,18 +37,16 @@
     </div>
     <div class="clearfloat"></div>
 
-    <h1>我的购物车</h1>
+    <h1>管理我的商品</h1>
     <br />
     <div class="col-md-6">
         <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>产品名</th>
-                    <th>单价</th>
-                    <th>数量</th>
-                    <th>总价格</th>
-                    <th>移出购物车</th>
+                    <th>商品名</th>
+                    <th>商品价格</th>
+                    <th>下架</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,10 +76,11 @@
         </table>
     </div>
     <div class="clearfloat"></div>
-    <h3>总计:</h3>
-    <input type="text"  />
-    <a href="Payment.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交订单</a>
+    <br />
+    <a href="Shopcart.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">确认</a>
 
-    
+
+
+
 
 </asp:Content>
