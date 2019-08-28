@@ -22,13 +22,14 @@ namespace Proc
             private set;
         }
         public string Detail;
+        public int Host;
 
         public Product() { }
 
         public Product(int ID)
         {
             SQL sql = new SQL();
-            var product = sql.Select("SELECT Name, Price, Count, Detail_ID, Detail FROM Product WHERE ID=" + ID);
+            var product = sql.Select("SELECT Name, Price, Count, Detail_ID, Detail, Type FROM Product WHERE ID=" + ID);
             if (product.Count != 1) throw new Exception("No Product");
             var pro = product[0];
             this.ID = ID;
@@ -37,6 +38,7 @@ namespace Proc
             Count = (int)pro[2];
             Detail_ID = (int)pro[3];
             Detail = SQL.atob(pro[4]);
+            Host = (int)pro[5];
         }
 
         public static bool Buy(int ID)
@@ -55,7 +57,7 @@ namespace Proc
             }
         }
 
-        public static Product Upload(string Name, decimal Price, int Count, string Detail, byte[] Img)
+        public static Product Upload(int Host, string Name, decimal Price, int Count, string Detail, byte[] Img)
         {
             Product product = new Product
             {
@@ -65,15 +67,17 @@ namespace Proc
                 Count = Count,
                 Detail = Detail,
                 Detail_ID = 0,
+                Host = Host
             };
             string img = Common.ImgToHex(Img);
             SQL sql = new SQL();
             sql.Execute("BEGIN");
             sql.Execute("INSERT INTO Product(ID, Cover) VALUES(0, UNHEX('" + img + "'))");
             product.Detail_ID = (int)sql.Select("SELECT max(ID) FROM ProductDetail")[0][0];
-            sql.Execute("INSERT INTO Product(ID, Name, Type, Price, Count, Detail, Detail_ID) VALUES(" +
+            sql.Execute("INSERT INTO Product(ID, Name, Type, Price, Count, Detail, Detail_ID, Type) VALUES(" +
                 "0, '" + SQL.btoa(product.Name) + "', " + product.Price + ", " +
-                product.Count + ", '" + SQL.btoa(product.Detail) + "', " + product.Detail_ID + ")");
+                product.Count + ", '" + SQL.btoa(product.Detail) + "', " + product.Detail_ID + ", " +
+                product.Host + ")");
             product.ID = (int)sql.Select("SELECT max(ID) FROM Product")[0][0];
             sql.Execute("COMMIT");
             sql.Disconnect();
@@ -102,11 +106,12 @@ namespace Proc
             return (byte[])img[0][0];
         }
 
-        public static List<Product> Explore()
+        public static List<Product> Explore(int Host = 0)
         {
             SQL sql = new SQL();
             List<Product> products = new List<Product>();
-            var prod = sql.Select("SELECT Name, Price, Count, Detail_ID, Detail, ID FROM Product");
+            var prod = sql.Select("SELECT Name, Price, Count, Detail_ID, Detail, ID, Type FROM Product" + 
+                (Host == 0 ? "" : "WHERE Type=" + Host));
             foreach (var pro in prod)
             {
                 Product product = new Product
@@ -116,7 +121,8 @@ namespace Proc
                     Price = (decimal)pro[1],
                     Count = (int)pro[2],
                     Detail_ID = (int)pro[3],
-                    Detail = SQL.atob(pro[4])
+                    Detail = SQL.atob(pro[4]),
+                    Host = (int)pro[6]
                 };
                 products.Add(product);
             };

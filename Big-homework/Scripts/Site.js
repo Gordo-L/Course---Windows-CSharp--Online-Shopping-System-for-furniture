@@ -1,4 +1,8 @@
 ﻿
+$("#dropdownbutton_exit").click(function () {
+    $.removeCookie('user');
+})
+
 $("#upkeynote").hide();
 
 $("#upkey").mouseover(function () {

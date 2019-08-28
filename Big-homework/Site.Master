@@ -86,7 +86,7 @@
                     <br />
                     <a class="dropdown-item" id="dropdownbutton_register" href="Register.aspx">注册</a>
                     <br />
-                    <a class="dropdown-item" href="Default.aspx">退出</a>
+                    <a class="dropdown-item" href="Default.aspx" id="dropdownbutton_exit">退出</a>
                 </div>
             </div>
 
@@ -114,6 +114,7 @@
             <p>状态栏：加载中……</p>
         </div>
         <script src="Scripts/Site.js"></script>
+        <script src="Scripts/jquery.cookie.min.js"></script>
 
     </form>
 </body>

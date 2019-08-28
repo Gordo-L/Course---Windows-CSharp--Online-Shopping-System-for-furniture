@@ -47,7 +47,7 @@ namespace Proc
             SQL sql = new SQL();
             if (sql.Select("SELECT ID FROM User WHERE Email = '" + email + "'").Count != 0) return false;
             sql.Execute("INSERT INTO User(ID, Type, Name, Password, Email, Rank, Coin, Paid_Coin) VALUES(" + 
-                "0, " + type + ", '', '" + password + "', '" + email + "', 0, 0, 0)");
+                "0, " + type + ", ' ', '" + password + "', '" + email + "', 0, 0, 0)");
             return true;
         }
     }
