@@ -21,7 +21,8 @@ namespace Big_homework
         [WebMethod]
         public int Logon(string email, string pass)
         {
-            return Login.LoginByName(email, pass);
+            Proc.User u = Proc.User.Login(email, pass);
+            return 0;
         }
     }
 }

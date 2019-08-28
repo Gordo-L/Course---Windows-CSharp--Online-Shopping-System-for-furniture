@@ -11,8 +11,13 @@
 #dropdownbutton_shopcart{
     position:relative;
     float: right;
-
 }
+
 .clearfloat {
     clear: both;
+}
+
+#back_div_img {
+    background: url(http://pic.51yuansu.com/backgd/cover/00/57/31/5c2483e1395e3.jpg!/fw/780/quality/90/unsharp/true/compress/true) no-repeat;
+    background-size: 100% 100%;
 }

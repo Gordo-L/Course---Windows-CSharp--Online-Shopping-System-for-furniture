@@ -12,33 +12,21 @@ namespace Proc
     {
         static readonly byte[] ServerConf = Convert.FromBase64String("c2VydmVyPTQ3LjEwMy4zMC40Mjt1c2VyIGlkPWJzbWFsbDtwYXNzd29yZD1kb250bG9naW5wbGVhc2U7ZGF0YWJhc2U9YnNtYWxs");
         private MySqlConnection connection;
-        private bool isConnected;
-        public SQL(bool isConnect = true)
+        public SQL()
         {
             connection = new MySqlConnection(Encoding.Default.GetString(ServerConf));
-            if (isConnect) WaitAndConnect();
-        }
-        public bool Connect()
-        {
-            if (connection.State != ConnectionState.Closed)
-            {
-                return false;
-            }
-            connection.Open();
-            isConnected = true;
-            return true;
-        }
-        public void WaitAndConnect()
-        {
-            while (isConnected) ;
             Connect();
         }
-        public void ExecCommand(string command)
+        public void Connect()
+        {
+            connection.Open();
+        }
+        public void Execute(string command)
         {
             MySqlCommand mySqlCommand = new MySqlCommand(command, connection);
             mySqlCommand.ExecuteNonQuery();
         }
-        public List<object[]> ExecSelect(string command)
+        public List<object[]> Select(string command)
         {
             DataSet dataSet = new DataSet();
             MySqlDataAdapter adapter = new MySqlDataAdapter(command, connection);
@@ -52,13 +40,20 @@ namespace Proc
         }
         public void Disconnect()
         {
-            if (!isConnected) return;
-            isConnected = false;
             connection.Close();
         }
         ~SQL()
         {
             Disconnect();
+        }
+        public static string btoa(string raw)
+        {
+            return Convert.ToBase64String(Encoding.Default.GetBytes(raw));
+        }
+
+        public static string atob(object base64)
+        {
+            return Encoding.Default.GetString(Convert.FromBase64String((string)base64));
         }
     }
 }

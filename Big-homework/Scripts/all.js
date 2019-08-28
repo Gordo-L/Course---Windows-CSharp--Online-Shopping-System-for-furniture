@@ -7,6 +7,6 @@ function webCall(method, data, func) {
         data: data,
         contentType: "application/json;charset=utf-8",
         datatype: "json",
-        success: func,
+        success: func
     });
 }

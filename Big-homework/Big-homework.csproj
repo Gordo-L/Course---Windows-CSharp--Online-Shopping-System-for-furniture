@@ -143,6 +143,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Image.aspx" />
     <Content Include="images\bed11.png" />
     <Content Include="images\bed12.png" />
     <Content Include="images\bed13.png" />
@@ -260,6 +261,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Image.aspx.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Image.aspx.designer.cs">
+      <DependentUpon>Image.aspx</DependentUpon>
     </Compile>
     <Compile Include="Log_on.aspx.cs">
       <DependentUpon>Log_on.aspx</DependentUpon>
