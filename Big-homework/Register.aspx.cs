@@ -29,8 +29,7 @@ namespace Big_homework
                     Response.Write("<script>alert('该电子邮件已被注册')</script>");
                     return;
                 }
-                Response.Write("<script>alert('注册成功')</script>");
-                Response.Redirect("Log_on.aspx");
+                Response.Write("<script>alert('注册成功');window.location.href='Log_on.aspx'</script>");
             }
             catch (Exception)
             {

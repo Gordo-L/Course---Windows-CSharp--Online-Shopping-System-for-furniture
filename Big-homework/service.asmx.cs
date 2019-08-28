@@ -18,11 +18,5 @@ namespace Big_homework
     public class service : System.Web.Services.WebService
     {
 
-        [WebMethod]
-        public int Logon(string email, string pass)
-        {
-            Proc.User u = Proc.User.Login(email, pass);
-            return 0;
-        }
     }
 }

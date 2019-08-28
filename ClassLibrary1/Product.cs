@@ -41,14 +41,14 @@ namespace Proc
             Host = (int)pro[5];
         }
 
-        public static bool Buy(int ID)
+        public static bool Buy(int ID, int number = 1)
         {
             try
             {
                 Product pro = new Product(ID);
                 if (pro.Count <= 0) return false;
                 SQL sql = new SQL();
-                sql.Execute("UPDATE Product SET Count=Count-1 WHERE ID=" + ID);
+                sql.Execute("UPDATE Product SET Count=Count-" + number + " WHERE ID=" + ID);
                 return true;
             }
             catch (Exception)

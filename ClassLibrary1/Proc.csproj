@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Order.cs" />
+    <Compile Include="Shopcart.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="SQL.cs" />
