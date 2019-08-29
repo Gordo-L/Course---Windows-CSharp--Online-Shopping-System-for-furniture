@@ -57,7 +57,7 @@ namespace Proc
             }
         }
 
-        public static bool Buy(ref SQL sql, int ID, int number = 1)
+        public static bool Buy(ref SQL sql, int ID, int user, int number = 1)
         {
             try
             {
@@ -65,6 +65,7 @@ namespace Proc
                 if (pro.Count != 1) return false;
                 if ((int)pro[0][0] < number) return false;
                 sql.Execute("UPDATE Product SET Count=Count-" + number + " WHERE ID=" + ID);
+                Order.Add(ref sql, user, ID, number);
                 return true;
             }
             catch (Exception)
@@ -80,7 +81,7 @@ namespace Proc
             sql.Execute("BEGIN");
             foreach (var i in cart)
             {
-                if (!Buy(ref sql, i.product, i.num)) return false;
+                if (!Buy(ref sql, i.product, user, i.num)) return false;
             }
             sql.Execute("COMMIT");
             Shopcart.Remove(user);

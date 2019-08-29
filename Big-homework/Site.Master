@@ -87,6 +87,10 @@
                     <a class="dropdown-item" id="dropdownbutton_register" href="Register.aspx">注册</a>
                     <br />
                     <a class="dropdown-item" href="Default.aspx" id="dropdownbutton_exit">退出</a>
+                    <br />
+                    <a class="dropdown-item" href="upload_goods.aspx" >上传</a>
+                    <br />
+                    <a class="dropdown-item" href="orders.aspx" >订单</a>
                 </div>
             </div>
 

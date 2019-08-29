@@ -82,5 +82,21 @@ namespace Big_homework
         {
             return Product.Buy_All(user);
         }
+
+        [WebMethod]
+        public string[] orders(int user)
+        {
+            var order = Order.Explore(user);
+            string[] ord = new string[order.Count];
+            for (int i = 0; i < order.Count; i++)
+            {
+                ord[i] =
+                    "{\"id\": " + order[i].ID + ", " +
+                    "\"name\": \"" + order[i].name + "\", " +
+                    "\"num\": " + order[i].num + ", " +
+                    "\"date\": \"" + order[i].date + "\"}";
+            }
+            return ord;
+        }
     }
 }
