@@ -44,9 +44,10 @@ textarea {
     bottom: 0px;
     width: 100%;
     border: 1px solid black;
+    background-color: white;
 }
 
 #status p {
     position: relative;
-    left: 10%;
+    left: 5px;
 }

@@ -8,10 +8,10 @@ namespace Proc
 {
     public struct Shopcart
     {
-        int ID;
-        int user;
-        int product;
-        int num;
+        public int ID;
+        public int user;
+        public int product;
+        public int num;
 
         public static List<Shopcart> Explore(int user)
         {
@@ -23,18 +23,18 @@ namespace Proc
                 shopcarts.Add(new Shopcart
                 {
                     ID = (int)i[0],
-                    user = (int)i[1],
-                    product = (int)i[2],
-                    num = (int)i[3]
+                    user = user,
+                    product = (int)i[1],
+                    num = (int)i[2]
                 });
             }
             return shopcarts;
         }
-        
+
         public static void Add(int user, int product)
         {
             SQL sql = new SQL();
-            var carts = sql.Select("SELECT ID FROM Shopcart " + 
+            var carts = sql.Select("SELECT ID FROM Shopcart " +
                 "WHERE User_ID=" + user + " AND Product_ID=" + product);
             if (carts.Count != 0)
             {
@@ -48,18 +48,44 @@ namespace Proc
             }
         }
 
-        public static int Remove(int user, int product)
+        public static void Remove(int user)
         {
-            int number = 0;
             SQL sql = new SQL();
-            var carts = sql.Select("SELECT ID, Number FROM Shopcart " + 
-                "WHERE User_ID=" + user + " AND Product_ID=" + product);
-            if (carts.Count != 0)
-            {
-                number = (int)carts[0][1];
-            }
-            sql.Execute("DELETE FROM Shopcart WHERE ID=" + (int)carts[0][0]);
-            return number;
+            sql.Execute("DELETE FROM Shopcart WHERE User_ID=" + user);
         }
+
+        //public static int Remove(int ID)
+        //{
+        //    int number = 0;
+        //    SQL sql = new SQL();
+        //    var carts = sql.Select("SELECT ID, Number FROM Shopcart " +
+        //        "WHERE ID=" + ID);
+        //    if (carts.Count != 0)
+        //    {
+        //        number = (int)carts[0][1];
+        //    }
+        //    sql.Execute("DELETE FROM Shopcart WHERE ID=" + (int)carts[0][0]);
+        //    return number;
+        //}
+
+        public static void Sub(int ID)
+        {
+            SQL sql = new SQL();
+            var carts = sql.Select("SELECT ID, Number FROM Shopcart " +
+                "WHERE ID=" + ID);
+            if (carts.Count != 1)
+            {
+                return;
+            }
+            if ((int)carts[0][1] == 1)
+            {
+                sql.Execute("DELETE FROM Shopcart WHERE ID=" + (int)carts[0][0]);
+            } else
+            {
+                sql.Execute("UPDATE Shopcart SET Number=Number-1 WHERE ID=" + (int)carts[0][0]);
+            }
+
+        }
+
     }
 }

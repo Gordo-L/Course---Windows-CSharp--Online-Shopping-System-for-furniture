@@ -73,7 +73,7 @@
                         <h3 class="panel-title">其它</h3>
                     </div>
                     <div class="panel-body">
-                        商家上传的
+                        <a href="explore.aspx" style="font-weight: bold">商家上传的商品</a>
                     </div>
                 </div>
             </div>

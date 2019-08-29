@@ -4,18 +4,21 @@
 
     <link rel="stylesheet" type="text/css" href="Content/upload_goods.css">
     <h1>卖家：上传商品</h1>
-    <p>上传商品名称：</p><input type=text />
+    <p>上传商品名称：</p><input type=text id="input_name" runat="server" />
     <br />
-    <p>上传商品价格：</p><input type=text />
+    <p>上传商品价格：</p><input type=text id="input_price" runat="server" />
+    <br />
+    <p>上传商品库存：</p><input type=text id="input_count" runat="server" />
     <br />
     <p>上传商品图片：</p>
-    <input type="file" class="custom-file-input" id="photobox" style="display:inline">
-    <button class="btn btn-outline-secondary" type="button" >上传</button>
+    <asp:FileUpload ID="photobox" runat="server" />
+    <%--<input type="file" class="custom-file-input" id="photobox" style="display:inline" runat="server">--%>
     <br />
     <p>上传商品介绍：</p>
-    <textarea></textarea>
+    <textarea id="input_detail" runat="server"></textarea>
     <br />
-    <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交申请</a>
+    <br />
+    <a href="#" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true" id="button_submit" runat="server">提交申请</a>
 
 
 

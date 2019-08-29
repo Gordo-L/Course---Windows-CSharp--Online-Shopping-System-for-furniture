@@ -121,6 +121,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\explore.css" />
     <Content Include="Content\Log_on.css" />
     <Content Include="Content\Payment.css" />
     <Content Include="Content\Register.css" />
@@ -131,6 +132,7 @@
     <Content Include="Content\upload_goods.css" />
     <Content Include="Content\Wardrobe.css" />
     <Content Include="Default.aspx" />
+    <Content Include="explore.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -161,6 +163,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Default.js" />
+    <Content Include="Scripts\explore.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -169,6 +172,7 @@
     <Content Include="Scripts\Log_on.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Register.js" />
+    <Content Include="Scripts\shopcart.js" />
     <Content Include="Scripts\Site.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -194,7 +198,6 @@
     <Content Include="service.asmx" />
     <Content Include="Shopcart.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="Upload.aspx" />
     <Content Include="upload_goods.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Wardrobe.aspx" />
@@ -261,6 +264,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="explore.aspx.cs">
+      <DependentUpon>explore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="explore.aspx.designer.cs">
+      <DependentUpon>explore.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -317,13 +327,6 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Upload.aspx.cs">
-      <DependentUpon>Upload.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Upload.aspx.designer.cs">
-      <DependentUpon>Upload.aspx</DependentUpon>
     </Compile>
     <Compile Include="upload_goods.aspx.cs">
       <DependentUpon>upload_goods.aspx</DependentUpon>

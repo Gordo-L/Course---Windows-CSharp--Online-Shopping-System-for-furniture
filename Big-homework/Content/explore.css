@@ -1,0 +1,60 @@
+﻿
+.explore_content {
+    position: relative;
+    height: 84px;
+}
+
+.panel {
+    margin: 3px;
+}
+
+.panel-body {
+    font-size: 1.2em;
+}
+
+.image_explore {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 2px;
+    top: 2px;
+}
+
+.label_price {
+    position: relative;
+    display: inline;
+    font-size: 1.2em;
+    color: #e74416;
+    font-weight: bold;
+}
+
+.label_count {
+    position: relative;
+    left: 10px;
+    font-size: 1.1em;
+    color: darkgray;
+    display: inline;
+}
+
+.panel_right {
+    position: absolute;
+    left: 82px;
+    top: 2px;
+}
+
+.label_detail {
+    position: relative;
+    left: 5px;
+    top: 3px;
+}
+
+.button_buy {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    display: inline;
+    background-color: #f4f4f4;
+    font-weight: bold;
+    border-color: black;
+}
+

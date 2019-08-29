@@ -17,14 +17,14 @@
                     <th>移出购物车</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="table_content">
+<%--                <tr>
                     <td>1</td>
                     <td>KOPARDAL 科帕达 床架</td>
                     <td>¥ 1,299.00</td>
                     <td>1</td>
                     <td>¥ 1,299.00</td>
-                    <td><input type="checkbox"/></td>
+                    <td><input type="button" value="移除1"/></td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -32,16 +32,17 @@
                     <td>¥ 2,999.00</td>
                     <td>1</td>
                     <td>¥ 2,999.00</td>
-                    <td><input type="checkbox"/></td>
-                </tr>
+                    <td><input type="button" value="移除1"/></td>
+                </tr>--%>
             </tbody>
         </table>
     </div>
     <div class="clearfloat"></div>
     <h3>总计:</h3>
-    <h3>¥ 4,298.00</h3>
-    <a href="Payment.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交订单</a>
+    <h3 id="label_total">¥ 0.00</h3>
+    <a id="button_submit_1" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">提交订单</a>
 
+    <script src="Scripts/shopcart.js"></script>
     
 
 </asp:Content>

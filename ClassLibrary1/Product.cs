@@ -57,6 +57,36 @@ namespace Proc
             }
         }
 
+        public static bool Buy(ref SQL sql, int ID, int number = 1)
+        {
+            try
+            {
+                var pro = sql.Select("SELECT Count FROM Product WHERE ID=" + ID);
+                if (pro.Count != 1) return false;
+                if ((int)pro[0][0] < number) return false;
+                sql.Execute("UPDATE Product SET Count=Count-" + number + " WHERE ID=" + ID);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static bool Buy_All(int user)
+        {
+            var cart = Shopcart.Explore(user);
+            SQL sql = new SQL();
+            sql.Execute("BEGIN");
+            foreach (var i in cart)
+            {
+                if (!Buy(ref sql, i.product, i.num)) return false;
+            }
+            sql.Execute("COMMIT");
+            Shopcart.Remove(user);
+            return true;
+        }
+
         public static Product Upload(int Host, string Name, decimal Price, int Count, string Detail, byte[] Img)
         {
             Product product = new Product
@@ -72,9 +102,9 @@ namespace Proc
             string img = Common.ImgToHex(Img);
             SQL sql = new SQL();
             sql.Execute("BEGIN");
-            sql.Execute("INSERT INTO Product(ID, Cover) VALUES(0, UNHEX('" + img + "'))");
+            sql.Execute("INSERT INTO ProductDetail(ID, Cover) VALUES(0, UNHEX('" + img + "'))");
             product.Detail_ID = (int)sql.Select("SELECT max(ID) FROM ProductDetail")[0][0];
-            sql.Execute("INSERT INTO Product(ID, Name, Type, Price, Count, Detail, Detail_ID, Type) VALUES(" +
+            sql.Execute("INSERT INTO Product(ID, Name, Price, Count, Detail, Detail_ID, Type) VALUES(" +
                 "0, '" + SQL.btoa(product.Name) + "', " + product.Price + ", " +
                 product.Count + ", '" + SQL.btoa(product.Detail) + "', " + product.Detail_ID + ", " +
                 product.Host + ")");
