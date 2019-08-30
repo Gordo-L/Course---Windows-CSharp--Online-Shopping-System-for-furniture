@@ -43,7 +43,7 @@ namespace Proc
 
         public static void Add(ref SQL sql, int user, int product, int num)
         {
-            sql.Execute("INSERT INTO Orders(ID, User_ID, Shopcart_Ornot, Product_ID, Date, Status) VALUES(" +
+            sql.Execute("INSERT INTO Orders(ID, User_ID, Showcart_Ornot, Product_ID, Date, Status) VALUES(" +
                 "0, " + user + ", " + "b'0', " + product + ", '" + DateTime.Now + "', " + num + ")");
         }
 

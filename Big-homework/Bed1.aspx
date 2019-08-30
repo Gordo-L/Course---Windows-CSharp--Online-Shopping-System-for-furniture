@@ -39,7 +39,7 @@
     <h1>¥ 1,299.00</h1>
     <p>想要一个经典的钢质床架，你不必一定要到古董商店去淘。这款产品设计简洁、经典，风格百搭，可与其他各类家具和谐搭配。</p>
     <br />
-    <a href="Shopcart.aspx" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">添加到购物车</a>
+    <p id="bt1" class="btn btn-primary btn-lg active btn-sm" role="button" aria-pressed="true">添加到购物车</p>
     <br />
     <br />
     <h4>商品信息</h4>
@@ -70,4 +70,5 @@
     用干净布块擦干
     </p>
  
+        <script src="Scripts/bed.js"></script>
 </asp:Content>

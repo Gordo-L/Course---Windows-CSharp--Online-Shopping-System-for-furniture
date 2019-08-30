@@ -50,5 +50,29 @@ namespace Proc
                 "0, " + type + ", ' ', '" + password + "', '" + email + "', 0, 0, 0)");
             return true;
         }
+
+        public static List<User> Explore()
+        {
+            SQL sql = new SQL();
+            var users = sql.Select("SELECT ID, Email, Type FROM User WHERE ID != 3");
+            List<User> usr = new List<User>();
+            foreach (var i in users)
+            {
+                usr.Add(new User
+                {
+                    ID = (int)i[0],
+                    email = (string)i[1],
+                    type = (int)i[2]
+                });
+            }
+            return usr;
+        }
+
+        public static void Remove(int user)
+        {
+            if (user == 3) return;
+            SQL sql = new SQL();
+            sql.Execute("DELETE FROM User WHERE ID=" + user);
+        }
     }
 }

@@ -68,7 +68,7 @@ namespace Proc
                 Order.Add(ref sql, user, ID, number);
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }
@@ -117,12 +117,15 @@ namespace Proc
 
         public static void Remove(int ID)
         {
+            if (ID <= 9) return;
             SQL sql = new SQL();
             sql.Execute("BEGIN");
             var detail = sql.Select("SELECT Detail_ID FROM Product WHERE ID=" + ID);
             if (detail.Count != 1) return;
             sql.Execute("DELETE FROM ProductDetail WHERE ID=" + (int)detail[0][0]);
             sql.Execute("DELETE FROM Product WHERE ID=" + ID);
+            sql.Execute("DELETE FROM Orders WHERE Product_ID=" + ID);
+            sql.Execute("DELETE FROM Shopcart WHERE Product_ID=" + ID);
             sql.Execute("COMMIT");
             sql.Disconnect();
         }
@@ -141,7 +144,7 @@ namespace Proc
         {
             SQL sql = new SQL();
             List<Product> products = new List<Product>();
-            var prod = sql.Select("SELECT Name, Price, Count, Detail_ID, Detail, ID, Type FROM Product" + 
+            var prod = sql.Select("SELECT Name, Price, Count, Detail_ID, Detail, ID, Type FROM Product " + 
                 (Host == 0 ? "" : "WHERE Type=" + Host));
             foreach (var pro in prod)
             {
@@ -158,6 +161,15 @@ namespace Proc
                 products.Add(product);
             };
             return products;
+        }
+
+        public static bool Modify(int id, decimal price, int count)
+        {
+            SQL sql = new SQL();
+            var prod = sql.Select("SELECT ID FROM Product WHERE ID=" + id);
+            if (prod.Count != 1) return false;
+            sql.Execute("UPDATE Product SET Price=" + price + ", Count=" + count + " WHERE ID=" + id);
+            return true;
         }
     }
 }

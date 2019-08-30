@@ -51,3 +51,22 @@ textarea {
     position: relative;
     left: 5px;
 }
+
+.label_dm {
+    color: black;
+    font-size: 1.2em;
+    position: center;
+}
+
+.dropdown-item {
+    position: relative;
+    width: 100px;
+}
+
+.aimg {
+    display: inline;
+}
+
+.aa {
+    display: inline;
+}

@@ -28,18 +28,20 @@ namespace Big_homework
                 if (user.ID == 0) throw new Exception();
                 Response.Cookies.Remove("user");
                 HttpCookie cookie = new HttpCookie("user", user.ID.ToString());
+                HttpCookie type = new HttpCookie("type", user.type.ToString());
                 if (chk)
                 {
                     cookie.Expires = DateTime.Now.AddDays(3);
                 }
                 Response.Cookies.Add(cookie);
+                Response.Cookies.Add(type);
                 Response.Write("<script>alert('登录成功');window.location.href='Default.aspx';</script>");
                 //Response.Redirect("Default.aspx");
 
             }
             catch (Exception)
             {
-                Response.Write("<script>alert('用户名或密码不正确')</script>");
+                Response.Write("<script>alert('邮箱地址或密码不正确')</script>");
             }
         }
     }

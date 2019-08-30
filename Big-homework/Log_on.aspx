@@ -26,7 +26,6 @@
             </div>
             <%--<button type="submit" class="btn btn-primary" id="button_logon1" runat="server">登录</button>--%>
             <asp:Button ID="Button_logon1" CssClass="btn btn-primary" runat="server" Text="登录" />
-            <p id="LoginFailedLabel">用户名或密码不正确</p>
         </form>
     </div>
 

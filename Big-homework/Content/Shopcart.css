@@ -14,3 +14,19 @@
 .clearfloat {
     clear: both;
 }
+
+.button_sub_num, .button_add_num, .text_num {
+    margin: 0;
+    /*border: 1px solid #CCCCCC;*/
+    display: inline-block;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.button_sub_num {
+    cursor: pointer;
+}
+
+.button_add_num {
+    cursor: pointer;
+}

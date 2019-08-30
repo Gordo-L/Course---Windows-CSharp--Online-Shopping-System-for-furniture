@@ -7,7 +7,6 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>产品名</th>
                     <th>数量</th>
                     <th>时间</th>

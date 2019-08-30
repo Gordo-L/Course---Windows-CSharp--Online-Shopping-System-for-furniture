@@ -68,21 +68,31 @@ namespace Proc
         //    return number;
         //}
 
-        public static void Sub(int ID)
+        public static bool Sub(int ID, bool add = false)
         {
             SQL sql = new SQL();
             var carts = sql.Select("SELECT ID, Number FROM Shopcart " +
                 "WHERE ID=" + ID);
             if (carts.Count != 1)
             {
-                return;
+                return false;
             }
-            if ((int)carts[0][1] == 1)
+            if ((int)carts[0][1] == 1 && !add)
             {
                 sql.Execute("DELETE FROM Shopcart WHERE ID=" + (int)carts[0][0]);
-            } else
+                return false;
+            }
+            else
             {
-                sql.Execute("UPDATE Shopcart SET Number=Number-1 WHERE ID=" + (int)carts[0][0]);
+                if (add)
+                {
+                    sql.Execute("UPDATE Shopcart SET Number=Number+1 WHERE ID=" + (int)carts[0][0]);
+                }
+                else
+                {
+                    sql.Execute("UPDATE Shopcart SET Number=Number-1 WHERE ID=" + (int)carts[0][0]);
+                }
+                return true;
             }
 
         }

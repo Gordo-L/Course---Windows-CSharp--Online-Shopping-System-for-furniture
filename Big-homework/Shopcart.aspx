@@ -6,15 +6,15 @@
     <h1>我的购物车</h1>
     <br />
     <div class="col-md-6">
+        <p id="label_refresh" style="display: none">正在刷新信息，请耐心等待</p>
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>产品名</th>
                     <th>单价</th>
                     <th>数量</th>
                     <th>总价格</th>
-                    <th>移出购物车</th>
+                    <%--<th>移出购物车</th>--%>
                 </tr>
             </thead>
             <tbody id="table_content">

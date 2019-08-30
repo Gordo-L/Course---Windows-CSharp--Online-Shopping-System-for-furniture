@@ -47,7 +47,7 @@ namespace Big_homework
             string[] str_array = new string[carts.Count];
             for (int i = 0; i < carts.Count; i++)
             {
-                Product product = new Product(carts[i].ID);
+                Product product = new Product(carts[i].product);
                 str_array[i] =
                     "{\"id\": " + carts[i].ID + ", " +
                     "\"name\": \"" + product.Name + "\", " +
@@ -65,16 +65,22 @@ namespace Big_homework
             decimal money = 0;
             for (int i = 0; i < carts.Count; i++)
             {
-                Product product = new Product(carts[i].ID);
-                money += product.Price;
+                Product product = new Product(carts[i].product);
+                money += product.Price * carts[i].num;
             }
             return money.ToString("#0.00");
         }
 
         [WebMethod]
-        public void remove_cart(int id)
+        public bool remove_cart(int id)
         {
-            Proc.Shopcart.Sub(id);
+            return Proc.Shopcart.Sub(id);
+        }
+
+        [WebMethod]
+        public bool add_cart(int id)
+        {
+            return Proc.Shopcart.Sub(id, true);
         }
 
         [WebMethod]
@@ -97,6 +103,65 @@ namespace Big_homework
                     "\"date\": \"" + order[i].date + "\"}";
             }
             return ord;
+        }
+
+        [WebMethod]
+        public string[] users()
+        {
+            var user = Proc.User.Explore();
+            string[] usr = new string[user.Count];
+            for (int i = 0; i < user.Count; i++)
+            {
+                usr[i] =
+                    "{\"id\": " + user[i].ID + ", " +
+                    "\"email\": \"" + user[i].email + "\", " +
+                    "\"type\": \"" + (user[i].type == 1 ? "卖家" : "买家" ) + "\"}";
+            }
+            return usr;
+        }
+
+        [WebMethod]
+        public string[] products(int user)
+        {
+            var prods = Proc.Product.Explore(user);
+            string[] str_array = new string[prods.Count];
+            for (int i = 0; i < prods.Count; i++)
+            {
+                str_array[i] =
+                    "{\"name\": \"" + prods[i].Name + "\", " +
+                    "\"id\": " + prods[i].ID + ", " +
+                    "\"price\": \"" + prods[i].Price.ToString("#0.00") + "\", " +
+                    "\"count\": " + prods[i].Count + ", " +
+                    "\"detail\": \"" + prods[i].Detail + "\"}";
+            }
+            return str_array;
+        }
+
+        [WebMethod]
+        public void remove_user(int id)
+        {
+            Proc.User.Remove(id);
+        }
+
+        [WebMethod]
+        public void remove_product(int id)
+        {
+            Proc.Product.Remove(id);
+        }
+
+        [WebMethod]
+        public bool modify_product(int id, string price, string count)
+        {
+            try
+            {
+                decimal dprice = decimal.Parse(price);
+                int icount = int.Parse(count);
+                return Proc.Product.Modify(id, dprice, icount);
+            } 
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

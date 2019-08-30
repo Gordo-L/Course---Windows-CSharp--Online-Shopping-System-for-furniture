@@ -31,6 +31,7 @@ namespace Big_homework
                 int icount = int.Parse(count);
                 byte[] img = photobox.FileBytes;
                 Product.Upload(int.Parse(user.Value), name, dprice, icount, detail, img);
+                Response.Redirect("Default.aspx");
             }
             catch (Exception err)
             {

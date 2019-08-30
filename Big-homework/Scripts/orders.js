@@ -4,7 +4,6 @@
 function gen_orders(id, name, date, num) {
     var orders =
         '<tr id="tr_cont_' + id + '">' +
-        '    <td>' + id + '</td>' +
         '    <td>' + name + '</td>' +
         '    <td>' + num + '</td>' +
         '    <td>' + date + '</td>' +

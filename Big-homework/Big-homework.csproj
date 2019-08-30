@@ -146,6 +146,14 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Image.aspx" />
+    <Content Include="images\1.png" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\4.png" />
+    <Content Include="images\5.png" />
+    <Content Include="images\6.png" />
+    <Content Include="images\7.jpg" />
+    <Content Include="images\7.png" />
     <Content Include="images\bed11.png" />
     <Content Include="images\bed12.png" />
     <Content Include="images\bed13.png" />
@@ -162,6 +170,7 @@
     <Content Include="Products.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\all.js" />
+    <Content Include="Scripts\bed.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Default.js" />
@@ -174,9 +183,11 @@
     <Content Include="Scripts\Log_on.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\orders.js" />
+    <Content Include="Scripts\products.js" />
     <Content Include="Scripts\Register.js" />
     <Content Include="Scripts\shopcart.js" />
     <Content Include="Scripts\Site.js" />
+    <Content Include="Scripts\users.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
